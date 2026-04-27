@@ -6,8 +6,6 @@ aliases:
 
 이 문서는 Unity 프로젝트에서 **Google Play 로그인을 설정하는 방법**을 정리한 문서입니다.  
 
--  **GCP OAuth 설정**
-
 ---
 
 ## 1. GCP 에서 OAuth client 생성하기
