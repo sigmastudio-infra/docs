@@ -86,16 +86,38 @@ java_macos_integration_enable=yes
 
 ## 6. 프로젝트 버전 고정
 
-프로젝트 루트에서 실행:
+우선 java를 사용하는 프로젝트 루트로 이동
+
+프로젝트 루트에서 다음 유틸리티를 실행하면 `.tool-versions`에 정보가 기록됨
 
 ```zsh
 asdf set java latest:temurin-21
 ```
 
-그러면 `.tool-versions`에 Java 버전이 기록
-
-확인:
+다음 유틸리티를 실행하면 `.tool-versions`파일의 변화를 확인 할 수 있음
 
 ```zsh
 cat .tool-versions
 ```
+
+다음 유틸리티를 실행하면 현재 프로젝트 루트에서 어떻게 설정되어 있는지 보여줌
+- 설치 여부도 알려줌
+
+```zsh
+asdf current java
+```
+
+```zsh
+# 출력
+Name            Version                  Source                                          Installed
+java            temurin-21.0.11+10.0.LTS /Users/sigma/work/dev/ant-server/.tool-versions false - Run `asdf install java temurin-21.0.11+10.0.LTS`
+```
+
+다음 유틸리티를 실행해 설치되지 않은 java를 설치함
+
+```zsh
+asdf install
+```
+
+유틸리티에 대한 설명은 아래 참조
+- [commands](https://asdf-vm.com/manage/commands.html)
