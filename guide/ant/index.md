@@ -6,7 +6,6 @@
   
 클라이언트는 Unity Authentication에서 받은 UGS JWT를 서버로 전달하고, 서버는 해당 토큰을 검증한 뒤 자체 세션을 생성합니다.
 
-
 ## 2. 전체 로그인 흐름  
   
 1. 클라이언트가 Google Play Games 로그인  
@@ -32,13 +31,11 @@
   
 검증이 통과되면 서버는 `sub`를 외부 인증 식별자로 사용합니다.
 
-
 ##  4. 유저 등록 / 조회 규칙  
   
 UGS JWT의 `sub`는 Unity Authentication 기준의 유저 식별자입니다.  
   
 서버는 이 값을 그대로 내부 `user_id`로 사용하지 않고, 자체 `user_id`를 발급합니다.
-
 
 ##  5. 서버 검증 설계 
 
@@ -48,8 +45,9 @@ UGS JWT를 검증합니다.
 Unity Authentication의 JWKS endpoint에서 공개키를 가져와  
 RS256 서명을 검증하며, 검증 성공 시 JWT payload를 기반으로 로그인 처리를 진행합니다.
 
-
-### 5-2. Audience 검증  
+--- 
+ 
+### 5-1. Audience 검증  
   
 서버는 `aud` 배열 내부에 다음 값이 포함되어 있는지 확인합니다.  
   
@@ -62,7 +60,7 @@ envId:<UGS Environment Id>
   
 ---  
   
-### 5-3. token_type 검증  
+### 5-2. token_type 검증  
   
 UGS JWT는 여러 목적의 토큰이 존재할 수 있기 때문에, 서버는 반드시 다음 값을 검증합니다.  
   
@@ -74,7 +72,7 @@ token_type = authentication
   
 ---  
   
-### 5-4. Leeway 사용  
+### 5-3. Leeway 사용  
   
 모바일 환경에서는 클라이언트와 서버 간 시간 차이가 발생할 수 있습니다.  
   
@@ -90,7 +88,7 @@ acceptLeeway(60)
   
 ---  
   
-### 5-5. sign_in_provider 검증  
+### 5-4. sign_in_provider 검증  
   
 현재 서버는 anonymous 로그인 사용을 허용하지 않습니다.  
   
@@ -104,16 +102,15 @@ sign_in_provider != anonymous
   
 현재 허용 provider:  
   
-- google-play-games  
-  
----  
-  
+- google-play-games 
+
 ## 6. Replay 공격 방지  
   
 UGS JWT는 탈취 가능성을 고려해야 합니다.  
   
-동일한 JWT가 재사용되는 것을 방지하기 위해,  
-서버는 JWT의 `jti`를 저장합니다.  
+동일한 JWT가 재사용되는 것을 방지하기 위해,  서버는 JWT의 `jti`를 저장합니다.  
+
+  ---
   
 ### 6-1. consumed_ugs_jti 테이블  
   
