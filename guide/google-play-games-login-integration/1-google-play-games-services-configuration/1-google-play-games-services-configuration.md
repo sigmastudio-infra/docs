@@ -242,7 +242,7 @@ Android credential은 모바일 기기에서 실행 중인 게임 앱을 식별�
 ![[google-play-games-services-configuration-025.png]]
 
 > [!NOTE] Web App Client ID는 다음 단계에서도 사용합니다
-> 여기서 만든 Web application OAuth client의 **Client ID**는 [[guide/google-play-games-login-integration/2-google-play-games-plugin-for-unity/index|Google Play Games plugin for Unity 설정 가이드]]의 **Web App Client ID** 필드와 [[guide/google-play-games-login-integration/3-unity-authentication-google-play-games/index|Unity Authentication과 Google Play Games 연동 가이드]]의 Google Play Games 설정에 사용합니다. **Client Secret**은 Unity Authentication에만 입력합니다.
+> 여기서 만든 Web application OAuth client의 **Client ID**는 [[guide/google-play-games-login-integration/2-google-play-games-plugin-for-unity/2-google-play-games-plugin-for-unity|Google Play Games plugin for Unity 설정 가이드]]의 **Web App Client ID** 필드와 [[guide/google-play-games-login-integration/3-unity-authentication-google-play-games/3-unity-authentication-google-play-games|Unity Authentication과 Google Play Games 연동 가이드]]의 Google Play Games 설정에 사용합니다. **Client Secret**은 Unity Authentication에만 입력합니다.
 
 > [!WARNING] 딥링크 대신 Google Cloud Console에서 직접 만든다면
 > Google Play Console과 같은 계정으로 로그인하고, 게임의 Play Games Services에 연결된 Google Cloud 프로젝트가 선택되어 있는지 확인합니다. 다른 프로젝트에 만든 OAuth client는 credential 추가 화면의 목록에 나타나지 않습니다. 공식 문서도 "Google Cloud Console에서 client ID를 만들기만 하면 PGS는 게임과 client의 연결을 알지 못한다"고 설명합니다([Avoid common issues](https://developer.android.com/games/pgs/console/setup)).

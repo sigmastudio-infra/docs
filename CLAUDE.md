@@ -13,19 +13,9 @@ Unity 게임 + 백엔드 프로젝트의 개발 문서를 모아둔 **Obsidian v
 - `design/` — 설계 문서
 - `governance/` — GitHub 저장소·브랜치 운영 정책
 
-## Document conventions
+## Documentation source of truth
 
-- 본문은 한국어로 쓰되 기술 용어는 영문 그대로 둔다 (예: OAuth Client, credential, SHA-1).
-- 카테고리에 관계없이 **문서 하나당 폴더 하나**를 쓴다. 폴더명은 kebab-case 영문이며 문서의 슬러그(사실상 제목) 역할을 한다.
-  - 문서 파일명은 `index.md`다.
-  - 다른 문서로의 위키링크는 전체 경로 + 표시명 형식을 쓴다: `[[guide/<슬러그>/index|한국어 제목]]`.
-  - 이미지는 해당 폴더의 `images/`에 두고 Obsidian 임베드(`![[파일명.png]]`)로 삽입한다.
-  - 이미지 파일명은 `<폴더명>-<번호>.png` 형식이다 (예: `firebase-project-setup-001.png`). `Pasted image <타임스탬프>.png` 형태는 붙여넣기로 생긴 임시 이름이며 이 형식으로 바꿔 나가는 중이다.
-- Frontmatter: `aliases`에 한국어 제목을 넣고 H1 제목과 일치시킨다. 출처 URL은 `references`에 넣는다.
-- Obsidian 문법을 적극 사용한다: 위키링크 `[[문서-슬러그]]`, 같은 문서 내 헤딩 링크 `[[#헤딩|표시명]]`, 콜아웃(`> [!QUESTION]`, `> [!WARNING]`, `> [!TIP]`, `> [!NOTE]`). `> [!TODO] 📸 스크린샷` 콜아웃은 저자가 직접 찍을 스크린샷 자리 표시다.
-- 아직 내용이 없는 스텁 문서는 본문에 `TODO` 한 줄만 둔다.
-- 외부 링크를 붙여넣을 때 추적 파라미터(`?_gl=...` 등)는 제거한다.
-- 공식 문서(developer.android.com 등)를 근거로 쓸 때는 원문을 영어 그대로 인용하고 출처 링크를 단다.
+문서 구조, 표현, 링크와 스크린샷 규칙은 [[governance/documentation-guide/documentation-guide|사내 위키 문서 작성 가이드]]를 따른다. 문서를 작성하거나 수정하기 전에 해당 가이드를 읽고, 공통 규칙은 개별 문서가 아니라 가이드에서 관리한다.
 
 ## Git workflow
 
