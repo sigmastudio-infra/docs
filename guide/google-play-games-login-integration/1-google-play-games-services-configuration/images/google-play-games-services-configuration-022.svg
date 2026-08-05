@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="920" viewBox="0 0 1800 920" role="img" aria-labelledby="title desc">
+  <title id="title">Credential 구성 관계</title>
+  <desc id="desc">Google Play Console credential, Google Cloud OAuth client, Android game build, and Unity Authentication relationships.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#3C4043" flood-opacity="0.10"/>
+    </filter>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#3C4043" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .font { font-family: Inter, Pretendard, "Noto Sans KR", Arial, sans-serif; }
+      .title { font-size: 36px; font-weight: 700; fill: #202124; letter-spacing: -0.6px; }
+      .subtitle { font-size: 18px; font-weight: 400; fill: #5F6368; letter-spacing: -0.15px; }
+      .group-title { font-size: 25px; font-weight: 700; fill: #202124; letter-spacing: -0.35px; }
+      .group-subtitle { font-size: 15px; font-weight: 500; fill: #5F6368; }
+      .card-label { font-size: 12px; font-weight: 700; letter-spacing: 1.15px; }
+      .card-title { font-size: 21px; font-weight: 700; fill: #202124; letter-spacing: -0.2px; }
+      .card-body { font-size: 15px; font-weight: 400; fill: #5F6368; }
+      .criterion { font-size: 14px; font-weight: 600; fill: #3C4043; }
+      .footer { font-size: 14px; font-weight: 500; fill: #5F6368; }
+      .connector { stroke: #9AA0A6; stroke-width: 2.5; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="920" fill="#F7F9FC"/>
+
+  <g id="heading" class="font">
+    <text class="title" x="60" y="66">Credential 구성 관계</text>
+    <text class="subtitle" x="60" y="102">Play Games Services credential은 연결된 Google Cloud 프로젝트의 OAuth client를 참조합니다.</text>
+  </g>
+
+  <g id="google-play-console-group" class="font">
+    <rect x="60" y="150" width="510" height="670" rx="24" fill="#FFFFFF" stroke="#DADCE0" filter="url(#shadow)"/>
+    <rect x="60" y="150" width="8" height="670" rx="4" fill="#34A853"/>
+    <circle cx="104" cy="205" r="22" fill="#E6F4EA"/>
+    <path d="M96 195 L114 205 L96 215 Z" fill="#188038"/>
+    <text class="group-title" x="142" y="203">Google Play Console</text>
+    <text class="group-subtitle" x="142" y="230">Play Games Services 게임 프로젝트 설정</text>
+    <line x1="100" y1="260" x2="530" y2="260" stroke="#E6E9ED"/>
+
+    <g id="android-credential-card">
+      <rect x="100" y="290" width="430" height="150" rx="18" fill="#FFFFFF" stroke="#B7DFC2" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <rect x="124" y="314" width="104" height="26" rx="13" fill="#E6F4EA"/>
+      <text class="card-label" x="140" y="332" fill="#137333">CREDENTIAL</text>
+      <text class="card-title" x="124" y="373">Android credential</text>
+      <text class="card-body" x="124" y="405">Authorization에서 OAuth client 선택</text>
+    </g>
+
+    <g id="game-server-credential-card">
+      <rect x="100" y="555" width="430" height="150" rx="18" fill="#FFFFFF" stroke="#B7DFC2" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <rect x="124" y="579" width="104" height="26" rx="13" fill="#E6F4EA"/>
+      <text class="card-label" x="140" y="597" fill="#137333">CREDENTIAL</text>
+      <text class="card-title" x="124" y="638">Game server credential</text>
+      <text class="card-body" x="124" y="670">Authorization에서 OAuth client 선택</text>
+    </g>
+  </g>
+
+  <g id="google-cloud-group" class="font">
+    <rect x="760" y="150" width="510" height="670" rx="24" fill="#FFFFFF" stroke="#DADCE0" filter="url(#shadow)"/>
+    <rect x="760" y="150" width="8" height="670" rx="4" fill="#4285F4"/>
+    <circle cx="804" cy="205" r="22" fill="#E8F0FE"/>
+    <path d="M794 211 C790 211 787 208 787 204 C787 201 789 198 792 198 C794 193 799 190 804 192 C808 192 812 195 813 199 C817 199 820 202 820 206 C820 209 817 211 814 211 Z" fill="#1A73E8"/>
+    <text class="group-title" x="842" y="203">Google Cloud</text>
+    <text class="group-subtitle" x="842" y="230">연결된 Google Cloud 프로젝트 · OAuth clients</text>
+    <line x1="800" y1="260" x2="1230" y2="260" stroke="#E6E9ED"/>
+
+    <g id="android-oauth-client-card">
+      <rect x="800" y="290" width="430" height="150" rx="18" fill="#FFFFFF" stroke="#B8CDF4" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <rect x="824" y="314" width="114" height="26" rx="13" fill="#E8F0FE"/>
+      <text class="card-label" x="840" y="332" fill="#1967D2">OAUTH CLIENT</text>
+      <text class="card-title" x="824" y="373">Android OAuth client</text>
+      <text class="card-body" x="824" y="405">Android 앱의 패키지와 인증서 식별</text>
+    </g>
+
+    <g id="web-oauth-client-card">
+      <rect x="800" y="555" width="430" height="150" rx="18" fill="#FFFFFF" stroke="#B8CDF4" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <rect x="824" y="579" width="114" height="26" rx="13" fill="#E8F0FE"/>
+      <text class="card-label" x="840" y="597" fill="#1967D2">OAUTH CLIENT</text>
+      <text class="card-title" x="824" y="638">Web application OAuth client</text>
+      <text class="card-body" x="824" y="670">게임 서버 역할 서비스의 OAuth 구성</text>
+    </g>
+  </g>
+
+  <g id="destinations" class="font">
+    <g id="android-game-build-card">
+      <rect x="1530" y="290" width="220" height="150" rx="18" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <rect x="1554" y="314" width="60" height="26" rx="13" fill="#F1F3F4"/>
+      <text class="card-label" x="1570" y="332" fill="#5F6368">APP</text>
+      <text class="card-title" x="1554" y="373">Android</text>
+      <text class="card-title" x="1554" y="399">게임 빌드</text>
+      <text class="card-body" x="1554" y="425">실제 설치 앱</text>
+    </g>
+
+    <g id="unity-authentication-card">
+      <rect x="1530" y="555" width="220" height="150" rx="18" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <rect x="1554" y="579" width="84" height="26" rx="13" fill="#F1F3F4"/>
+      <text class="card-label" x="1570" y="597" fill="#5F6368">SERVICE</text>
+      <text class="card-title" x="1554" y="638">Unity</text>
+      <text class="card-title" x="1554" y="664">Authentication</text>
+      <text class="card-body" x="1554" y="690">Google Play Games 로그인 설정</text>
+    </g>
+  </g>
+
+  <g id="connections" class="font">
+    <circle cx="530" cy="365" r="4.5" fill="#9AA0A6"/>
+    <line class="connector" x1="534" y1="365" x2="588" y2="365"/>
+    <line class="connector" x1="742" y1="365" x2="796" y2="365"/>
+    <circle cx="800" cy="365" r="4.5" fill="#9AA0A6"/>
+    <rect x="594" y="326" width="142" height="78" rx="14" fill="#FFFFFF" stroke="#DADCE0"/>
+    <text class="criterion" x="665" y="354" text-anchor="middle">선택한 Android</text>
+    <text class="criterion" x="665" y="378" text-anchor="middle">OAuth client ID</text>
+
+    <circle cx="1230" cy="365" r="4.5" fill="#9AA0A6"/>
+    <line class="connector" x1="1234" y1="365" x2="1280" y2="365"/>
+    <line class="connector" x1="1480" y1="365" x2="1526" y2="365"/>
+    <circle cx="1530" cy="365" r="4.5" fill="#9AA0A6"/>
+    <rect x="1286" y="326" width="188" height="78" rx="14" fill="#FFFFFF" stroke="#DADCE0"/>
+    <text class="criterion" x="1380" y="354" text-anchor="middle">package name + SHA-1</text>
+    <text class="criterion" x="1380" y="378" text-anchor="middle">일치</text>
+
+    <circle cx="530" cy="630" r="4.5" fill="#9AA0A6"/>
+    <line class="connector" x1="534" y1="630" x2="588" y2="630"/>
+    <line class="connector" x1="742" y1="630" x2="796" y2="630"/>
+    <circle cx="800" cy="630" r="4.5" fill="#9AA0A6"/>
+    <rect x="594" y="591" width="142" height="78" rx="14" fill="#FFFFFF" stroke="#DADCE0"/>
+    <text class="criterion" x="665" y="619" text-anchor="middle">선택한 Web</text>
+    <text class="criterion" x="665" y="643" text-anchor="middle">OAuth client ID</text>
+
+    <circle cx="1230" cy="630" r="4.5" fill="#9AA0A6"/>
+    <line class="connector" x1="1234" y1="630" x2="1280" y2="630"/>
+    <line class="connector" x1="1480" y1="630" x2="1526" y2="630"/>
+    <circle cx="1530" cy="630" r="4.5" fill="#9AA0A6"/>
+    <rect x="1286" y="591" width="188" height="78" rx="14" fill="#FFFFFF" stroke="#DADCE0"/>
+    <text class="criterion" x="1380" y="619" text-anchor="middle">동일한 Client ID +</text>
+    <text class="criterion" x="1380" y="643" text-anchor="middle">Client Secret 설정</text>
+  </g>
+
+  <g id="legend" class="font">
+    <circle cx="70" cy="866" r="5" fill="#9AA0A6"/>
+    <line class="connector" x1="75" y1="866" x2="108" y2="866"/>
+    <text class="footer" x="124" y="871">연결선은 네트워크 요청 순서가 아니라, 두 설정 사이에서 참조하거나 일치해야 하는 값을 나타냅니다.</text>
+  </g>
+</svg>
